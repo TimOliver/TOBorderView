@@ -35,8 +35,14 @@ NS_SWIFT_NAME(BorderView)
 /// The corner radius of the background view. Default is 25 points
 @property (nonatomic, assign) CGFloat cornerRadius;
 
+/// The amount of insetting between the content and the edge of the border (Default is 20 points each)
+@property (nonatomic, assign) NSDirectionalEdgeInsets contentInsets;
+
 /// The color of the rounded background view. Default is `UIColor.secondaryFill`
 @property (nonatomic, strong, null_resettable) UIColor *backgroundColor;
+
+/// A reference to the container view that hosts all of the content that can be used for sizing
+@property (nonatomic, readonly) UIView *contentView;
 
 /// Instead of a solid background color, the background is instead
 /// a dynamic translucency view. (Default is NO)
