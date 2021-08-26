@@ -19,10 +19,42 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    // Border with text content
+    [self makeBorderWithTextContent];
+
+    // Border around image content
+    // [self makeBorderWithImageContent];
+}
+
+- (void)makeBorderWithImageContent
+{
+    // Create an "image view" at a predetermined size
+    UIView *imageView = [[UIView alloc] initWithFrame:(CGRect){0, 0, 150, 200}];
+    imageView.backgroundColor = [UIColor redColor];
+
+    // Create a new border view
+    self.borderView = [[TOBorderView alloc] init];
+
+    // Override the insetting to be 10 points
+    [self.borderView setAllContentInsets:10];
+
+    // Apply the adjusted corner radius to the image view
+    [self.borderView applyContentCornerRadiusToView:imageView];
+
+    // Add the image view to the border view
+    [self.borderView addSubview:imageView];
+
+    // Get the border view to size itself around the image view's size
+    [self.borderView sizeToFit];
+
+    // Add it to the view controller
+    [self.view addSubview:self.borderView];
+}
+
+- (void)makeBorderWithTextContent
+{
     // Create, configure and add the border view
     self.borderView = [[TOBorderView alloc] initWithFrame:CGRectMake(0, 0, 280, 200)];
-    self.borderView.autoresizingMask = UIViewAutoresizingFlexibleTopMargin | UIViewAutoresizingFlexibleBottomMargin |
-                                        UIViewAutoresizingFlexibleLeftMargin | UIViewAutoresizingFlexibleRightMargin;
     [self.view addSubview:self.borderView];
 
     // Make a bold variant of title 1 styling
@@ -55,14 +87,12 @@
         CGRect frame = CGRectZero;
         frame.size.width = self.borderView.contentView.frame.size.width;
         frame.size.height = [textLabel sizeThatFits:self.borderView.contentView.frame.size].height;
-        frame.origin.y = CGRectGetMaxY(titleLabel.frame) + 20.0f;
+        frame.origin.y = CGRectGetMaxY(titleLabel.frame) + 5.0f;
         frame;
     });
 
+    // Scale the border view around the text
     [self.borderView sizeToFit];
-
-    // Move to the center
-    self.borderView.center = self.view.center;
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -70,9 +100,17 @@
     [super viewDidAppear:animated];
 
     // Remove the title bar in Mac Catalyst
+#if TARGET_OS_MACCATALYST
     UIWindowScene *scene = self.view.window.windowScene;
     scene.titlebar.titleVisibility = UITitlebarTitleVisibilityHidden;
     scene.titlebar.toolbar = nil;
+#endif
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [super viewDidLayoutSubviews];
+    self.borderView.center = self.view.center;
 }
 
 @end
