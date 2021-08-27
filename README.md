@@ -1,13 +1,15 @@
-# TOBorderView
-
 <p align="center">
-<img src="screenshot.png" width="500" style="margin:0 auto" />
+<img src="screenshot.png" width="650" style="margin:0 auto" />
 </p>
 
+<span align="center">
+  
 [![CI](https://github.com/TimOliver/TOBorderView/workflows/CI/badge.svg)](https://github.com/TimOliver/TOBorderView/actions?query=workflow%3ACI)
 [![Version](https://img.shields.io/cocoapods/v/TOBorderView.svg?style=flat)](http://cocoadocs.org/docsets/TOBorderView)
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/TimOliver/TOBorderView/master/LICENSE)
 [![Platform](https://img.shields.io/cocoapods/p/TOBorderView.svg?style=flat)](http://cocoadocs.org/docsets/TOBorderView)
+  
+</span>
 
 
 `TOBorderView` is a very basic, but high performance container UI component that wraps custom view content inside a colored rectangle with rounded corners. It automatically handles correctly insetting the content, as well as managing the internal view hierarchy in order to guarantee maximum performance.
