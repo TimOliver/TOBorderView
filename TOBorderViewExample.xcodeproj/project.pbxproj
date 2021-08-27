@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221F3EAA26D94589004DFE45 /* TOBorderViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 221F3EA926D94589004DFE45 /* TOBorderViewTests.m */; };
+		221F3EB126D945B4004DFE45 /* TOBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD4AF26D3540500DE55B7 /* TOBorderView.m */; };
 		227DD49526D3531500DE55B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD49426D3531500DE55B7 /* AppDelegate.m */; };
 		227DD49B26D3531500DE55B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD49A26D3531500DE55B7 /* ViewController.m */; };
 		227DD49E26D3531500DE55B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227DD49C26D3531500DE55B7 /* Main.storyboard */; };
@@ -16,7 +18,20 @@
 		227DD4B026D3540500DE55B7 /* TOBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD4AF26D3540500DE55B7 /* TOBorderView.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		221F3EAC26D94589004DFE45 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 227DD48826D3531500DE55B7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 227DD48F26D3531500DE55B7;
+			remoteInfo = TOBorderViewExample;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		221F3EA726D94589004DFE45 /* TOBorderViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TOBorderViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		221F3EA926D94589004DFE45 /* TOBorderViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOBorderViewTests.m; sourceTree = "<group>"; };
+		221F3EAB26D94589004DFE45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		227DD49026D3531500DE55B7 /* TOBorderViewExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TOBorderViewExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		227DD49326D3531500DE55B7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		227DD49426D3531500DE55B7 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,6 +48,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		221F3EA426D94589004DFE45 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		227DD48D26D3531500DE55B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -43,11 +65,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		221F3EA826D94589004DFE45 /* TOBorderViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				221F3EA926D94589004DFE45 /* TOBorderViewTests.m */,
+				221F3EAB26D94589004DFE45 /* Info.plist */,
+			);
+			path = TOBorderViewTests;
+			sourceTree = "<group>";
+		};
 		227DD48726D3531500DE55B7 = {
 			isa = PBXGroup;
 			children = (
 				227DD4AD26D353EA00DE55B7 /* TOBorderView */,
 				227DD49226D3531500DE55B7 /* TOBorderViewExample */,
+				221F3EA826D94589004DFE45 /* TOBorderViewTests */,
 				227DD49126D3531500DE55B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				227DD49026D3531500DE55B7 /* TOBorderViewExample.app */,
+				221F3EA726D94589004DFE45 /* TOBorderViewTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -89,6 +122,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		221F3EA626D94589004DFE45 /* TOBorderViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 221F3EAE26D94589004DFE45 /* Build configuration list for PBXNativeTarget "TOBorderViewTests" */;
+			buildPhases = (
+				221F3EA326D94589004DFE45 /* Sources */,
+				221F3EA426D94589004DFE45 /* Frameworks */,
+				221F3EA526D94589004DFE45 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				221F3EAD26D94589004DFE45 /* PBXTargetDependency */,
+			);
+			name = TOBorderViewTests;
+			productName = TOBorderViewTests;
+			productReference = 221F3EA726D94589004DFE45 /* TOBorderViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		227DD48F26D3531500DE55B7 /* TOBorderViewExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 227DD4A926D3531600DE55B7 /* Build configuration list for PBXNativeTarget "TOBorderViewExample" */;
@@ -114,6 +165,10 @@
 			attributes = {
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					221F3EA626D94589004DFE45 = {
+						CreatedOnToolsVersion = 12.5;
+						TestTargetID = 227DD48F26D3531500DE55B7;
+					};
 					227DD48F26D3531500DE55B7 = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -133,11 +188,19 @@
 			projectRoot = "";
 			targets = (
 				227DD48F26D3531500DE55B7 /* TOBorderViewExample */,
+				221F3EA626D94589004DFE45 /* TOBorderViewTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		221F3EA526D94589004DFE45 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		227DD48E26D3531500DE55B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -151,6 +214,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		221F3EA326D94589004DFE45 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				221F3EAA26D94589004DFE45 /* TOBorderViewTests.m in Sources */,
+				221F3EB126D945B4004DFE45 /* TOBorderView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		227DD48C26D3531500DE55B7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +235,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		221F3EAD26D94589004DFE45 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 227DD48F26D3531500DE55B7 /* TOBorderViewExample */;
+			targetProxy = 221F3EAC26D94589004DFE45 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		227DD49C26D3531500DE55B7 /* Main.storyboard */ = {
@@ -184,6 +264,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		221F3EAF26D94589004DFE45 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = TOBorderViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOBorderViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOBorderViewExample.app/TOBorderViewExample";
+			};
+			name = Debug;
+		};
+		221F3EB026D94589004DFE45 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6LF3GMKZAB;
+				INFOPLIST_FILE = TOBorderViewTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = dev.tim.TOBorderViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TOBorderViewExample.app/TOBorderViewExample";
+			};
+			name = Release;
+		};
 		227DD4A726D3531600DE55B7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -343,6 +463,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		221F3EAE26D94589004DFE45 /* Build configuration list for PBXNativeTarget "TOBorderViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				221F3EAF26D94589004DFE45 /* Debug */,
+				221F3EB026D94589004DFE45 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		227DD48B26D3531500DE55B7 /* Build configuration list for PBXProject "TOBorderViewExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
