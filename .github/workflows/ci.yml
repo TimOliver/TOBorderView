@@ -1,0 +1,13 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: xcodebuild -project TOBorderViewExample.xcodeproj -scheme TOBorderViewExample -destination 'platform=iOS Simulator,name=iPhone 11' test
