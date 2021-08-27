@@ -11,8 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class TOBorderView;
 
-/// A hosting view that wraps other UI content to provide
-/// a backing border view consisting of a solid fill with rounded corners.
+/// A hosting view that wraps other UI content inside
+/// a backing view consisting of a solid fill with rounded corners.
 /// The subview hierarchy of the content is internally managed to guarantee the
 /// most performant use of Core Animation's corner radius API.
 NS_SWIFT_NAME(BorderView)
