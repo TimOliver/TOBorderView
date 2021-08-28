@@ -12,11 +12,9 @@
 </span>
 
 
-`TOBorderView` is a very basic, but high performance container UI component that wraps custom view content inside a colored rectangle with rounded corners. It automatically handles correctly insetting the content, as well as managing the internal view hierarchy in order to guarantee maximum performance.
+`TOBorderView` is a very basic container UIKit component that wraps custom view content inside a solid colored rectangle with rounded corners. It automatically handles correctly insetting the content, as well as managing the internal view hierarchy in order to guarantee maximum performance with Core Animation.
 
-Starting with iOS 11, and to a much great extent on Big Sur, the design language on Apple's platforms has become such that separating content by enclosing it in rounded rectangles has become preferable to using high contrast hairline separators.
-
-As this is such a common view to see in applications, it made sense to create one high quality reusable component, than simply recreating it whenever it is needed.
+Starting with iOS 11, and to a much greater extent on Big Sur, the design language on Apple's platforms has become such that separating content by enclosing it in rounded rectangles has become preferable to using high contrast hairline separators. As thisis becoming the case, it made sense to create one high quality reusable component to achieve this, than simply recreating it whenever it is needed.
 
 ## Features
 
