@@ -16,6 +16,9 @@
 		227DD4A326D3531600DE55B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 227DD4A126D3531600DE55B7 /* LaunchScreen.storyboard */; };
 		227DD4A626D3531600DE55B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD4A526D3531600DE55B7 /* main.m */; };
 		227DD4B026D3540500DE55B7 /* TOBorderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 227DD4AF26D3540500DE55B7 /* TOBorderView.m */; };
+		22B519A0278C764300E8D16D /* TOBorderView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 22B5199F278C764300E8D16D /* TOBorderView.podspec */; };
+		22B519A2278C764900E8D16D /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 22B519A1278C764900E8D16D /* README.md */; };
+		22B519A4278C764C00E8D16D /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 22B519A3278C764C00E8D16D /* LICENSE */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +48,9 @@
 		227DD4AC26D353B700DE55B7 /* TOBorderViewExample.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TOBorderViewExample.entitlements; sourceTree = "<group>"; };
 		227DD4AE26D3540500DE55B7 /* TOBorderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TOBorderView.h; sourceTree = "<group>"; };
 		227DD4AF26D3540500DE55B7 /* TOBorderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TOBorderView.m; sourceTree = "<group>"; };
+		22B5199F278C764300E8D16D /* TOBorderView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = TOBorderView.podspec; sourceTree = "<group>"; };
+		22B519A1278C764900E8D16D /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		22B519A3278C764C00E8D16D /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +86,9 @@
 				227DD4AD26D353EA00DE55B7 /* TOBorderView */,
 				227DD49226D3531500DE55B7 /* TOBorderViewExample */,
 				221F3EA826D94589004DFE45 /* TOBorderViewTests */,
+				22B5199F278C764300E8D16D /* TOBorderView.podspec */,
+				22B519A1278C764900E8D16D /* README.md */,
+				22B519A3278C764C00E8D16D /* LICENSE */,
 				227DD49126D3531500DE55B7 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -205,7 +214,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22B519A4278C764C00E8D16D /* LICENSE in Resources */,
+				22B519A0278C764300E8D16D /* TOBorderView.podspec in Resources */,
 				227DD4A326D3531600DE55B7 /* LaunchScreen.storyboard in Resources */,
+				22B519A2278C764900E8D16D /* README.md in Resources */,
 				227DD4A026D3531600DE55B7 /* Assets.xcassets in Resources */,
 				227DD49E26D3531500DE55B7 /* Main.storyboard in Resources */,
 			);
@@ -425,7 +437,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = TOBorderViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -446,7 +458,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6LF3GMKZAB;
 				INFOPLIST_FILE = TOBorderViewExample/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

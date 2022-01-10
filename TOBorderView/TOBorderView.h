@@ -37,7 +37,7 @@ NS_SWIFT_NAME(BorderView)
 @property (nonatomic, assign) CGFloat cornerRadius;
 
 /// The amount of insetting between the content and the edge of the border (Default is 20 points each)
-@property (nonatomic, assign) NSDirectionalEdgeInsets contentInsets;
+@property (nonatomic, assign) UIEdgeInsets contentInsets;
 
 /// The corner radius that can be applied to internal content so it aligns with the border
 @property (nonatomic, readonly) CGFloat contentCornerRadius;
