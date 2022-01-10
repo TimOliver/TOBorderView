@@ -25,7 +25,7 @@ Starting with iOS 11, and to a much greater extent on Big Sur, the design langua
 * The rounded rectangle background view can potentially be made translucent using `UIVisualEffectView`.
 
 ## System Requirements
-iOS 13.0 and above.
+iOS 9.0 and above.
 
 ## Installation
 

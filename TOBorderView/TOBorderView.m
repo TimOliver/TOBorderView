@@ -74,8 +74,10 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
     [super setBackgroundColor:[UIColor clearColor]];
 
     // Set default property values
-    self.contentInsets = (NSDirectionalEdgeInsets){25, 25, 25, 25};
-    self.insetsLayoutMarginsFromSafeArea = NO;
+    self.contentInsets = (UIEdgeInsets){25, 25, 25, 25};
+    if (@available(iOS 11.0, *)) {
+        self.insetsLayoutMarginsFromSafeArea = NO;
+    }
 
     // Configure the solid background view by default
     [self configureSolidBackgroundView];
@@ -91,7 +93,9 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
     // Configure a solid background view
     self.backgroundView = [[UIView alloc] initWithFrame:self.bounds];
     self.backgroundView.layer.cornerRadius = kTOBorderViewDefaultRadius;
-    self.backgroundView.layer.cornerCurve = kCACornerCurveContinuous;
+    if (@available(iOS 13.0, *)) {
+        self.backgroundView.layer.cornerCurve = kCACornerCurveContinuous;
+    }
     self.backgroundColor = nil; // Force default via null_resettable
     [self insertSubview:self.backgroundView atIndex:0];
 }
@@ -102,7 +106,9 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:self.translucencyStyle];
     UIVisualEffectView *effectView = [[UIVisualEffectView alloc] initWithEffect:effect];
     effectView.layer.cornerRadius = kTOBorderViewDefaultRadius;
-    effectView.layer.cornerCurve = kCACornerCurveContinuous;
+    if (@available(iOS 13.0, *)) {
+        effectView.layer.cornerCurve = kCACornerCurveContinuous;
+    }
     effectView.layer.masksToBounds = YES;
     effectView.frame = self.bounds;
     self.backgroundView = effectView;
@@ -125,12 +131,12 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
 
     // Layout the container view to match the insetting
     self.contentView.frame = ({
-        NSDirectionalEdgeInsets insets = self.contentInsets;
+        UIEdgeInsets insets = self.contentInsets;
         CGRect frame = self.bounds;
-        frame.size.width -= (insets.leading + insets.trailing);
+        frame.size.width -= (insets.left + insets.right);
         frame.size.height -= (insets.top + insets.bottom);
         frame.origin.y = insets.top;
-        frame.origin.x = isReversedLayout ? insets.trailing : insets.leading;
+        frame.origin.x = isReversedLayout ? insets.right : insets.left;
         frame;
     });
 }
@@ -156,9 +162,9 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
     self.contentView.frame = frame;
 
     // Update the frame of the outer view to match
-    NSDirectionalEdgeInsets insets = self.contentInsets;
+    UIEdgeInsets insets = self.contentInsets;
     CGRect outerFrame = self.frame;
-    outerFrame.size.width = (frame.size.width) + (insets.leading + insets.trailing);
+    outerFrame.size.width = (frame.size.width) + (insets.left + insets.right);
     outerFrame.size.height = (frame.size.height) + (insets.top + insets.bottom);
     self.frame = outerFrame;
 
@@ -176,11 +182,11 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
 
 - (void)sizeToFit:(CGSize)fittingSize
 {
-    NSDirectionalEdgeInsets insets = self.contentInsets;
+    UIEdgeInsets insets = self.contentInsets;
 
     // Adjust for the insets
     CGSize size = fittingSize;
-    size.width -= (insets.leading + insets.trailing);
+    size.width -= (insets.left + insets.right);
     size.height -= (insets.top + insets.bottom);
 
     // Adjust the size of every view
@@ -209,15 +215,16 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
 - (void)applyContentCornerRadiusToView:(UIView *)view
 {
     view.layer.cornerRadius = self.contentCornerRadius;
-    view.layer.cornerCurve = kCACornerCurveCircular;
+    if (@available(iOS 13.0, *)) {
+        view.layer.cornerCurve = kCACornerCurveCircular;
+    }
 }
 
 #pragma mark - Accessors -
 
 - (void)setAllContentInsets:(CGFloat)inset
 {
-    self.contentInsets = NSDirectionalEdgeInsetsMake(inset, inset,
-                                                     inset, inset);
+    self.contentInsets = UIEdgeInsetsMake(inset, inset, inset, inset);
     [self setNeedsLayout];
 }
 
@@ -225,7 +232,11 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
 {
     UIColor *newColor = backgroundColor;
     if (backgroundColor == nil) {
-        newColor = [UIColor secondarySystemFillColor];
+        if (@available(iOS 13.0, *)) {
+            newColor = [UIColor secondarySystemFillColor];
+        } else {
+            newColor = [UIColor colorWithWhite:0.95f alpha:1.0f];
+        }
     }
     self.backgroundView.backgroundColor = newColor;
 }
@@ -245,9 +256,9 @@ const CGFloat kTOBorderViewDefaultRadius = 25.0f;
 - (CGFloat)contentCornerRadius
 {
     // Capture all of the inset values
-    NSDirectionalEdgeInsets insets = self.contentInsets;
+    UIEdgeInsets insets = self.contentInsets;
     NSArray *insetValues = @[@(insets.top), @(insets.bottom),
-                             @(insets.leading), @(insets.trailing)];
+                             @(insets.left), @(insets.right)];
 
     // Fetch the lowest inset value we have
     CGFloat smallestInset = CGFLOAT_MAX;
