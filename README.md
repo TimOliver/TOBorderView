@@ -27,7 +27,7 @@ As this is such a common view to see in applications, it made sense to create on
 * The rounded rectangle background view can potentially be made translucent using `UIVisualEffectView`.
 
 ## System Requirements
-iOS 13.0 and above.
+iOS 9.0 and above.
 
 ## Installation
 
